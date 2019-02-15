@@ -14,30 +14,30 @@ namespace Consumer
         {
 
             #region example 1-2
-            var factory = new ConnectionFactory() { HostName = "some-rabbit" };
-            using (var connection = factory.CreateConnection())
-            using (var channel = connection.CreateModel())
-            {
-                channel.QueueDeclare(queue: "hello",
-                                     durable: false,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: null);
+            //var factory = new ConnectionFactory() { HostName = "some-rabbit" };
+            //using (var connection = factory.CreateConnection())
+            //using (var channel = connection.CreateModel())
+            //{
+            //    channel.QueueDeclare(queue: "hello",
+            //                         durable: true,
+            //                         exclusive: false,
+            //                         autoDelete: false,
+            //                         arguments: null);
 
-                var consumer = new EventingBasicConsumer(channel);
-                consumer.Received += (model, ea) =>
-                {
-                    var body = ea.Body;
-                    var message = Encoding.UTF8.GetString(body);
-                    Console.WriteLine(" [x] ConsoleConsumer = {0}", message);
-                };
-                channel.BasicConsume(queue: "hello",
-                                     autoAck: true,
-                                     consumer: consumer);
+            //    var consumer = new EventingBasicConsumer(channel);
+            //    consumer.Received += (model, ea) =>
+            //    {
+            //        var body = ea.Body;
+            //        var message = Encoding.UTF8.GetString(body);
+            //        Console.WriteLine(" [x] ConsoleConsumer = {0}", message);
+            //    };
+            //    channel.BasicConsume(queue: "hello",
+            //                         autoAck: true,
+            //                         consumer: consumer);
 
-                Console.WriteLine(" Press [enter] to exit.");
-                Console.ReadLine();
-            }
+            //    Console.WriteLine(" Press [enter] to exit.");
+            //    Console.ReadLine();
+            //}
             #endregion
 
             #region example3

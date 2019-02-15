@@ -35,33 +35,17 @@ namespace Producer
             #endregion
 
             #region 2. example
-            var factory = new ConnectionFactory() { HostName = "some-rabbit" };
-            var connection = factory.CreateConnection();
-            var channel = connection.CreateModel();
-
-            channel.QueueDeclare(queue: "hello",
-                                 durable: false,
-                                 exclusive: false,
-                                 autoDelete: false,
-                                 arguments: null);
-
-            bool loop = true;
-            while (loop)
-            {
-                channel.BasicPublish(exchange: "", routingKey: "hello", basicProperties: null, body: Encoding.UTF8.GetBytes(DateTime.Now.ToString()));
-                Thread.Sleep(3000);
-            }
-
-            #endregion
-
-            #region 3. example
-
             //var factory = new ConnectionFactory() { HostName = "some-rabbit" };
             //var connection = factory.CreateConnection();
             //var channel = connection.CreateModel();
 
+            ////for persistent message
+            //var props = channel.CreateBasicProperties();
+            //props.ContentType = "text/plain";
+            //props.DeliveryMode = 2;
+
             //channel.QueueDeclare(queue: "hello",
-            //                     durable: false,
+            //                     durable: true,
             //                     exclusive: false,
             //                     autoDelete: false,
             //                     arguments: null);
@@ -69,14 +53,41 @@ namespace Producer
             //bool loop = true;
             //while (loop)
             //{
-            //    Model model = new Model()
-            //    {
-            //        Message = randomMessage(),
-            //        Time = DateTime.Now
-            //    };
-            //    channel.BasicPublish(exchange: "", routingKey: "hello", basicProperties: null, body: ToByteArray<Model>(model));
+            //    channel.BasicPublish(exchange: "", routingKey: "hello", basicProperties: props, body: Encoding.UTF8.GetBytes(DateTime.Now.ToString()));
             //    Thread.Sleep(3000);
             //}
+
+            #endregion
+
+            #region 3. example
+
+
+            var factory = new ConnectionFactory() { HostName = "some-rabbit" };
+            var connection = factory.CreateConnection();
+            var channel = connection.CreateModel();
+
+            ////for persistent message
+            var props = channel.CreateBasicProperties();
+            props.ContentType = "text/plain";
+            props.DeliveryMode = 2;
+
+            channel.QueueDeclare(queue: "hello",
+                                 durable: true,
+                                 exclusive: false,
+                                 autoDelete: false,
+                                 arguments: null);
+
+            bool loop = true;
+            while (loop)
+            {
+                Model model = new Model()
+                {
+                    Message = randomMessage(),
+                    Time = DateTime.Now
+                };
+                channel.BasicPublish(exchange: "", routingKey: "hello", basicProperties: props, body: ToByteArray<Model>(model));
+                Thread.Sleep(3000);
+            }
 
 
             #endregion
