@@ -1,0 +1,14 @@
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\bin\Debug\netcoreapp2.2\Consumer.deps.json
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\bin\Debug\netcoreapp2.2\Consumer.runtimeconfig.json
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\bin\Debug\netcoreapp2.2\Consumer.runtimeconfig.dev.json
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\bin\Debug\netcoreapp2.2\Consumer.dll
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\obj\Debug\netcoreapp2.2\Consumer.csproj.CoreCompileInputs.cache
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\obj\Debug\netcoreapp2.2\Consumer.AssemblyInfoInputs.cache
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\obj\Debug\netcoreapp2.2\Consumer.AssemblyInfo.cs
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\obj\Debug\netcoreapp2.2\Consumer.csprojAssemblyReference.cache
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\bin\Debug\netcoreapp2.2\Consumer.pdb
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\obj\Debug\netcoreapp2.2\Consumer.dll
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\obj\Debug\netcoreapp2.2\Consumer.pdb
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\bin\Debug\netcoreapp2.2\ModelLibrary.dll
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\bin\Debug\netcoreapp2.2\ModelLibrary.pdb
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer\obj\Debug\netcoreapp2.2\Consumer.csproj.CopyComplete

@@ -1,0 +1,56 @@
+version: '3.4'
+
+services:
+  aspconsumer:
+    image: aspconsumer:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_aspconsumer$
+    volumes:
+      - C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer:/app
+      - C:\Users\ertugrul.gamgam\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_aspconsumer$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_aspconsumer$ bin/Debug/netcoreapp2.2/ASPConsumer.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+
+  consumer:
+    image: consumer:dev
+    build:
+      target: base
+    #environment:
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_consumer$
+    volumes:
+      - C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Consumer:/app
+      - C:\Users\ertugrul.gamgam\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_consumer$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_consumer$ bin/Debug/netcoreapp2.2/Consumer.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+
+
+  producer:
+    image: producer:dev
+    build:
+      target: base
+    #environment:
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_producer$
+    volumes:
+      - C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\Producer:/app
+      - C:\Users\ertugrul.gamgam\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_producer$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_producer$ bin/Debug/netcoreapp2.2/Producer.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+

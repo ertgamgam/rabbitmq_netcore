@@ -1,0 +1,17 @@
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\bin\Debug\netcoreapp2.2\ASPConsumer.deps.json
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\bin\Debug\netcoreapp2.2\ASPConsumer.runtimeconfig.json
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\bin\Debug\netcoreapp2.2\ASPConsumer.runtimeconfig.dev.json
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\bin\Debug\netcoreapp2.2\ASPConsumer.dll
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\bin\Debug\netcoreapp2.2\ModelLibrary.dll
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\bin\Debug\netcoreapp2.2\ModelLibrary.pdb
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\obj\Debug\netcoreapp2.2\ASPConsumer.csprojAssemblyReference.cache
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\obj\Debug\netcoreapp2.2\ASPConsumer.csproj.CoreCompileInputs.cache
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\obj\Debug\netcoreapp2.2\ASPConsumer.RazorAssemblyInfo.cache
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\obj\Debug\netcoreapp2.2\ASPConsumer.RazorAssemblyInfo.cs
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\obj\Debug\netcoreapp2.2\ASPConsumer.AssemblyInfoInputs.cache
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\obj\Debug\netcoreapp2.2\ASPConsumer.AssemblyInfo.cs
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\obj\Debug\netcoreapp2.2\ASPConsumer.RazorTargetAssemblyInfo.cache
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\obj\Debug\netcoreapp2.2\ASPConsumer.csproj.CopyComplete
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\bin\Debug\netcoreapp2.2\ASPConsumer.pdb
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\obj\Debug\netcoreapp2.2\ASPConsumer.dll
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\ASPConsumer\obj\Debug\netcoreapp2.2\ASPConsumer.pdb

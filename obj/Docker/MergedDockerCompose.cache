@@ -1,0 +1,42 @@
+networks:
+  rabbitmqnetwork:
+    external:
+      name: rabbitmqnetwork
+services:
+  aspconsumer:
+    build:
+      context: C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console
+      dockerfile: ASPConsumer/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTPS_PORT: '44381'
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: aspconsumer
+    networks:
+      rabbitmqnetwork: null
+    ports:
+    - published: 61471
+      target: 80
+    - published: 44381
+      target: 443
+    volumes:
+    - C:\Users\ertugrul.gamgam\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\ertugrul.gamgam\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  consumer:
+    build:
+      context: C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console
+      dockerfile: Consumer/Dockerfile
+    image: consumer
+    networks:
+      rabbitmqnetwork: null
+  producer:
+    build:
+      context: C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console
+      dockerfile: Producer/Dockerfile
+    depends_on:
+    - aspconsumer
+    - consumer
+    image: producer
+    networks:
+      rabbitmqnetwork: null
+version: '3.4'

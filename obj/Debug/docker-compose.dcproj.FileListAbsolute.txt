@@ -1,0 +1,11 @@
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\bin\Debug\Consumer.dll
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\bin\Debug\Producer.dll
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\bin\Debug\Producer.pdb
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\bin\Debug\Consumer.pdb
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\bin\Debug\ModelLibrary.dll
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\bin\Debug\ModelLibrary.pdb
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\bin\Debug\ASPConsumer.dll
+C:\Users\ertugrul.gamgam\source\repos\RabbitMQ_Console\bin\Debug\ASPConsumer.pdb
