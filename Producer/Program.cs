@@ -1,4 +1,5 @@
 ﻿using ModelLibrary;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System;
 using System.IO;
@@ -85,7 +86,10 @@ namespace Producer
                     Message = randomMessage(),
                     Time = DateTime.Now
                 };
-                channel.BasicPublish(exchange: "", routingKey: "hello", basicProperties: props, body: ToByteArray<Model>(model));
+
+                var message = JsonConvert.SerializeObject(model);
+                var body = Encoding.UTF8.GetBytes(message);
+                channel.BasicPublish(exchange: "", routingKey: "hello", basicProperties: props, body: body);
                 Thread.Sleep(3000);
             }
 

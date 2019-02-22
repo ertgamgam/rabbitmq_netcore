@@ -1,4 +1,5 @@
 ﻿using ModelLibrary;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
@@ -42,9 +43,9 @@ namespace Consumer
 
             #region example3
 
-            //Example3();
-            //Console.WriteLine(" Press [enter] to exit.");
-            //Console.ReadLine();
+            Example3();
+            Console.WriteLine(" Press [enter] to exit.");
+            Console.ReadLine();
 
             #endregion
 
@@ -57,7 +58,7 @@ namespace Consumer
             var channel = connection.CreateModel();
 
             channel.QueueDeclare(queue: "hello",
-                                 durable: false,
+                                 durable: true,
                                  exclusive: false,
                                  autoDelete: false,
                                  arguments: null);
@@ -67,7 +68,8 @@ namespace Consumer
             consumer.Received += (model, ea) =>
             {
                 var body = ea.Body;
-                var message = FromByteArray<Model>(body);
+                var messagestring = Encoding.UTF8.GetString(body);
+                var message = JsonConvert.DeserializeObject<Model>(messagestring);
                 Console.WriteLine("ConsoleConsumer: Date = " + message.Time.ToString() + "Message = " + message.Message);
             };
 

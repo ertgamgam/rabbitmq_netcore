@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 using ModelLibrary;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
@@ -67,8 +68,9 @@ namespace ASPConsumer
                 consumer.Received += (model, ea) =>
                 {
                     var body = ea.Body;
-                    var message = Encoding.UTF8.GetString(body);
-                    Debug.WriteLine(" [x] ASPConsumer = "+ message);
+                    var messagestring = Encoding.UTF8.GetString(body);
+                    var message = JsonConvert.DeserializeObject<Model>(messagestring);
+                    Debug.WriteLine("ASPConsumer: Date = " + message.Time.ToString() + "Message = " + message.Message);
                 };
                 channel.BasicConsume(queue: "hello",
                                      autoAck: true,
